@@ -1,7 +1,7 @@
 package partA.ex02;
 
 public class CountChar {
-    public static void main(String[] args) {
+    public static String countChar() {
         String str = "www.oracle.com";
 
         int max = str.length();
@@ -12,7 +12,15 @@ public class CountChar {
 
         count++;
 
-        System.out.println("Counting w : " + count );
+       str += ("Counting w : " + count );
+        return str;
     }
+
+    public static void main(String[] args) {
+        String charOutput = countChar();
+        System.out.print(charOutput);
+    }
+
+
     }
 

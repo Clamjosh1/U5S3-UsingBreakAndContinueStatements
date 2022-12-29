@@ -1,7 +1,9 @@
 package partA.ex03;
 
 public class BreakContinue {
-    public static void main( String [] args ) {
+
+    public static String breakContinue() {
+        String response = "";
 
         for( int i = 0 ; i < 10 ; i++ ) {
 
@@ -9,12 +11,20 @@ public class BreakContinue {
 
             }
 
-            System.out.println("The number is " + i );
+            response += ("The number is " + i );
 
             if( i == 7 ) {
 
             }
 
         }
+
+        return response;
+    }
+    public static void main( String [] args ) {
+        String outputBreak = breakContinue();
+        System.out.println(outputBreak);
+
+
     }
 }

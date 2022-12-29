@@ -2,7 +2,7 @@
 
 * Part A - Foundations 6.3
 * Part B - Foundations practice
-* Part C - Instructor Challenge
+* Part C - Algorithm Challenge
 
 ## Part A
 
@@ -20,6 +20,12 @@ In the package `partA.ex01` examine `ComputeSum`.
   * Compute the sum of the numbers entered
   * When 0 is entered, the program must exit and display the
   sum of the numbers
+  * Test the program by entering 1,2,3,4,5,6,7,8,9,10 then enter 0 to exit the program
+  
+    Your program is working correctly, if when run, the following is the output:
+```
+55
+```
 
 ### Exercise 02
 
@@ -58,21 +64,6 @@ The number is 3
 The number is 5
 The number is 7 
 ```
-### Exercise 04
-
-#### Step 01
-
-In the package `partA.ex04` look at the file `Divisors`.
-
-#### Step 02
-
-* Modify the program to include comments for the loop
-about …
-  * Loop variables used
-  * Logic of the loop
-  * Number of iterations
-  * Condition used
-  * Control flow in the loop
 
 ## Part B
 
@@ -122,22 +113,8 @@ Your program is working correctly, if when run, the following is the output.
 9
 10
 ```
-
-## Part C
-
-### Exercise 01
-
-In the package `partC.ex01` look at the `ValidatePin` class and complete the following :
-
-1. Declare a valid integer `securityPin`;
-2. Prompt the user to enter a value for `userPin`;
-3. In a while loop, perform the following steps:
-    1. Compare the user-entered `userPin`  with `securityPin`
-    2. If the entered `userPin`is not the same, prompt the user to enter `userPin` again.
-4. Print a message confirming that the correct pin has been entered and that the user now has access to their account.
-
-### Exercise 02
-In the package `partC.ex02` look at the `DisplayMultiples` class complete the following :
+### Exercise 03
+In the package `partB.ex03` look at the `DisplayMultiples` class complete the following :
 
 #### Overview
 
@@ -154,31 +131,35 @@ All of these numbers are a multiple of 3:
 0 3 6 9 12 15 18 21 24 27 30 33 36 39 42 45 48
 ```
 
-### Exercise 03
+## Part C
 
-#### Overview
-Using text to create a picture is known as ASCII art.  In section 2, we made an ASCII art cat.  This required us to type every character in the art we wanted to create.  In this practice, you’ll find a way to draw basic shapes programmatically in customizable sizes.
+### Problem 1
+We are looking to write down a list of all possible numbers that can be a
+multiple of 3 or 5.
+You will be given any number, but to be put on the list the number has to be a non-negative number.
 
-![](./assets/img.png)
+Return true if the given number can be added to the list.
 
-#### Task
+Tip: Think about using the % "mod" operator
 
-In the package `partC.ex03` look at the `LoopShape` class and complete the following two methods:
+Example:
+```java
+multipleOf(3) --> true
+multipleOf(10) --> true
+multipleOf(8) --> false
+```
+### Problem 2
+You are given two random temperatures from different states.
+Between these two temperatures, we need to check if one state is freezing while the other is having an extreme hot day.
+Both of these statements need to be true to prove that some states have extreme cases of temperatures.
 
-* createRectangle(): This method accepts two arguments for width and height which should be used to print a rectangle
-* createTriangle(): This method accepts one argument for the size of a leg, which should be used to print an isosceles right triangle
+Return true, if one temp is less than 0 and the other is greater than 100.
 
-Try changing the value of the arguments you’re supplying these two methods from the main method.  Make sure your program can successfully draw each shape to a custom size. Additionally, your program must:
+Example:
+```java
+checkTemp(120, -1) --> true
+checkTemp(-1, 120) --> true
+checkTemp(2, 120) --> false
+```
 
-* Refuse to draw shapes with any dimension less than 1
-* Be able to draw shapes with any dimension equal to 1 (a 1x1 shape should print just a single character)
-
-If the problem seems difficult, remember to break it into smaller challenges such as:
-
-* How do I print a single line that is a variable number of “#” characters wide?
-* How do I create a String that begins and ends with a “#”, but has a variable number of spaces in between?
-
-Finishing each smaller challenge is an accomplishment.  This problem is as much about understanding loops as it’s about understanding how to break a big problem into smaller tasks.
-
-The knowledge you’ve gained in this section on loops will be very helpful in completing this program.  You’re free to use whichever type of loop statements you feel would be best.  You’ll also need to remember a few concepts from previous sections.
 

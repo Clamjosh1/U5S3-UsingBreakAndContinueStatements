@@ -1,12 +1,20 @@
 package partB.ex02;
 
 public class LoopWithContinueExample {
-    public static void main(String[] args) {
+    public static String loopWithContinue() {
+        String response = "";
+
         for (int i = 0; i < 10; i++) {
             if (i == 4) {
                 continue;
             }
-            System.out.print(i + "\t");
+            response += (i + "\t");
         }
+
+        return response;
+    }
+    public static void main(String[] args) {
+        String outputLoop = loopWithContinue();
+        System.out.println(outputLoop);
     }
 }

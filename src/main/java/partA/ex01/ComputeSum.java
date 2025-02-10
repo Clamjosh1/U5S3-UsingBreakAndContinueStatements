@@ -1,26 +1,29 @@
 package partA.ex01;
 
+import java.util.Scanner;
+
 public class ComputeSum {
 
     public static String computeSum() {
-        String response = "";
+        int sum = 0;
+        Scanner scanner = new Scanner(System.in);
 
-        /**
-         * Your code goes here
-         */
+        while (true) {
+            System.out.print("Enter a number (or 0 to exit): ");
+            int num = scanner.nextInt();
 
+            if (num == 0) {
+                break;
+            }
 
+            sum += num;
+        }
 
-        return response;
+        return String.valueOf(sum);
     }
 
     public static void main(String[] args) {
         String sum = computeSum();
-        System.out.print(sum);
+        System.out.println(sum);
     }
-
-
-
-
-    }
-
+}

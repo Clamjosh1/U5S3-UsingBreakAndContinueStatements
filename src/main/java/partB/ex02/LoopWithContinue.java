@@ -4,11 +4,12 @@ public class LoopWithContinue {
     public static String loopWithContinue() {
         String response = "";
 
-        /**
-         * Your code goes here
-         */
-
-
+        for (int i = 1; i <= 10; i++) {
+            if (i >= 5 && i <= 8) {
+                continue;
+            }
+            response += i + "\n";
+        }
 
         return response;
     }
@@ -17,5 +18,4 @@ public class LoopWithContinue {
         String loopOutput = loopWithContinue();
         System.out.print(loopOutput);
     }
-
 }
